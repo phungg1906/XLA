@@ -47,6 +47,7 @@ H = (hsv[:, :, 0] * 255).astype(np.uint8)
 S = (hsv[:, :, 1] * 255).astype(np.uint8)   
 V = (hsv[:, :, 2] * 255).astype(np.uint8)   
 
+
 Bài 4
 Duyệt từng pixel, chuyển RGB sang HSV, chỉnh sửa, rồi chuyển ngược HSV sang RGB
 for i in range(arr.shape[0]):
@@ -57,6 +58,8 @@ for i in range(arr.shape[0]):
         ( Giảm độ sáng xuống 75%)
         v = v * 0.75         
         hsv[i, j] = colorsys.hsv_to_rgb(h, s, v)   # Chuyển lại về RGB
+
+        
 Bài 5
 Đọc 3 ảnh dưới dạng grayscale (ảnh xám), giá trị float
 a = iio.imread('baby.jpeg', mode='F')
